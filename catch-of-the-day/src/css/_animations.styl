@@ -3,6 +3,12 @@
   enter
   exit
   appear Must set transitionAppear={true} on animation component
+
+  This is written in a language called stylus.
+  Stylus is exactly the same as sass but is based on indentation instead of : and {} syntax
+  Use two spaces, not a tab character. if you mix tabs and spaces it will break!
+  How to compile stylus?
+  Can't use custom CSS preprocessor in your Webpack build unless you do something called Eject. See package.json.
 */
 
 .order-enter
@@ -40,4 +46,4 @@
   bottom 0
   &.count-exit-active
     background green
-    transform translateY(-100%) scale(3)
+    transform translateY(-100%) 

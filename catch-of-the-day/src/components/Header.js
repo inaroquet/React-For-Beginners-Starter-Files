@@ -1,6 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export const Header = ({tagline, age}) => (
+// this is a Stateless Functional Component
+export const Header = props => (
   <header className="top">
     <h1>
       Catch
@@ -11,7 +13,7 @@ export const Header = ({tagline, age}) => (
       Day
     </h1>
     <h3 className="tagline">
-      <span>{tagline}</span>
+      <span>{props.tagline}</span>
     </h3>
   </header>
 );
@@ -19,11 +21,15 @@ export const Header = ({tagline, age}) => (
 class Header1 extends React.Component {
   render() {
     return (
-        <h3 className="tagline">
-          <span>WRONG HEADER</span>
-        </h3>
+      <h3 className="tagline">
+        <span>WRONG HEADER</span>
+      </h3>
     );
   }
-}
+};
+
+Header.propTypes = {
+  tagline: PropTypes.string.isRequired
+};
 
 export default Header1;
